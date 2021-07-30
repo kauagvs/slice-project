@@ -4,9 +4,18 @@ import axios from "axios";
 import useSWR from "swr";
 import api from "../services/api";
 
+// import { Switch, Route, useLocation } from "react-router-dom";
+import Link from "next/link";
+
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+
 const fetcher = (url: any) => axios.get(url).then(res => res.data);
 
 export default function Home(props: any) {
+  // const location = useLocation();
+  const [activePlanet, setActivePlanet] = useState("/");
+
   const { data, error } = useSWR(
     "/api/channel/UC4ncvgh5hFr5O83MH7-jRJg",
     fetcher,

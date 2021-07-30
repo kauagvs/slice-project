@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledButton } from "./styles";
+import { StyledButton } from "./ButtonStyles";
 
 interface ButtonProps {
   primary?: boolean;
