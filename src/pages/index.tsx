@@ -9,6 +9,7 @@ import Link from "next/link";
 
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { Wrapper } from "../components/Wrapper/Wrapper";
 
 const fetcher = (url: any) => axios.get(url).then(res => res.data);
 
@@ -28,15 +29,13 @@ export default function Home(props: any) {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div>
+    <Wrapper>
       <Head>
         <title>Home</title>
       </Head>
 
-      <main>
-        <h1>Project</h1>
-      </main>
-    </div>
+      <main></main>
+    </Wrapper>
   );
 }
 
