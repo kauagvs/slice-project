@@ -10,6 +10,7 @@ import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Wrapper } from "../components/Wrapper/Wrapper";
+import { Sidebar } from "../components/Sidebar/Sidebar";
 
 const fetcher = (url: any) => axios.get(url).then(res => res.data);
 
@@ -34,6 +35,7 @@ export default function Home(props: any) {
         <title>Home</title>
       </Head>
 
+      <Sidebar />
       <main></main>
     </Wrapper>
   );
